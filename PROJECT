@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: kubebuilder
 repo: kaas/cron
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: kaas
+  group: batch
+  kind: CronJob
+  path: kaas/cron/api/v1
+  version: v1
 version: "3"
